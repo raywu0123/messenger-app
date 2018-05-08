@@ -1,0 +1,146 @@
+.header {
+  background-color: #eabe49;
+  margin: 0;
+  padding-left: 10%;
+  color: #fcfcfc;
+  vertical-align: bottom;
+}
+.title {
+  margin: 0;
+  display: inline-block;
+}
+.title-item {
+  display: inline-block;  
+  float: right;
+}
+.title-label{
+  margin: 0;
+  margin-top: 5px;
+  margin-right: 20px;
+  font-size: 1.5em;
+  display: inline-block;  
+}
+.title-btn {
+  margin: 0;
+  margin-top: 5px; 
+  margin-right: 20px;
+  border: none;
+  padding: 5px;
+  display: inline-block;
+}
+
+.Content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row;
+}
+
+.Contacts {
+  display: inline-block;
+  margin: 0;
+	overflow-y: auto;
+  list-style-type: none;
+  padding-left: 0;
+  flex: 0 0 10em;
+  border-right: 2px solid gray;
+}
+
+.ContactName {
+	position: relative;
+	font-size: 1.4em;
+	background-color: white;
+  padding: 10px;
+  border-left: 0.6em solid gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.ContactName:hover, .ContactName.focus {
+  background-color: rgb(222, 222, 222);
+  transition-duration: 0.2s;  
+}
+
+.ContactName.online {
+  border-left: 0.6em solid red;  
+  transition-duration: 0.2s;  
+}
+
+.name {
+  display: inline-block;
+}
+.unreadNum {
+  display: inline-block;
+  font-size: 1.0em;  
+  color: #f77777;
+  transition-duration: 0.2s;
+}
+
+.MsgThread {
+  flex: 1 1 auto;  
+
+  display: flex;
+  flex-flow: column;
+  padding-top: 20px;
+}
+
+.Msgs {
+  flex: 1 1 auto;
+  margin: 0;
+  padding-left: 0px;
+  overflow: auto;
+}
+
+.MsgLine {
+  list-style-type: none;
+  padding: 4px;
+}
+.MsgText {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;  
+  font-size: 1.2em;  
+  padding: 4px 1em 4px 1em;
+  resize: none;
+  outline: none;
+  border: none;
+}
+.MsgText.receive {
+  background-color: #ffc853;
+  border-radius: 8px;
+  margin-right: auto;
+}
+.MsgText.send {
+  background-color: #e2e2e2;  
+  border-radius: 8px;
+  margin-left: auto;
+}
+
+.TextInput {
+  flex: 0 1 2.5em;
+  display: flex;
+  flex-flow: row;
+}
+.InputBar {
+  flex: 1 1 auto;
+  font-size: 1.6em;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 0.5em;
+  resize: none;
+}
+.Send-btn {
+  flex: 0 1 8em;
+}
+input {
+  font-size: 1.2em;
+  padding: 5px;
+  border: none;
+  border-top: 1px solid gray;
+}
+button {
+  font-size: 1em;
+  background-color: #da9400;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+}

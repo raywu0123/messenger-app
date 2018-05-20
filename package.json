@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install && cd client && npm install",
+    "start": "concurrently \"node server.js\" \"cd client && npm start\" "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^3.5.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "socket.io": "^2.1.0"

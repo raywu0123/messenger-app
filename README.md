@@ -4,18 +4,14 @@
 * Clone this repository
 * Install the depencies by the following commands:
   ```
-  npm install
-  cd ./client
-  npm install
+  npm run build
   ```
-* Run the content server with command   
-  `node server.js` or `nodemon server.js`
-* Run the client server by the following        commands:
+* Run the app by the following script:
   ```
-  cd ./client
   npm start
   ```
-* Open your browser and go to `localhost:3000`
+  it will start the server and a client simultaneously
+* The default client is on `localhost:3000` 
 
 ## TODOs
   * Chat-room info-bar

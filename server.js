@@ -3,6 +3,7 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var bodyParser = require('body-parser')
+var PORT = 7777
 
 class InBoxes {
   constructor() {
@@ -91,7 +92,7 @@ class InBoxes {
     this.createUser('Carol')
     this.addMessage({text: 'Hi Alice, I am Bob', sender: 'Bob', receiver: 'Alice'})
     this.addMessage({text: 'How you doin?', sender: 'Bob', receiver: 'Alice'})
-    console.log(this.inboxes)
+    // console.log(this.inboxes)
   }
   debugPrint() {
   }
@@ -111,7 +112,9 @@ app.post('/login', function(req, res) {
   })
 })
 
-server.listen(7777)
+server.listen(PORT, () => {
+  console.log('Server is running on port: ', PORT)
+})
 io.on('connection', function(client) {
   console.log('Client connected...');
 

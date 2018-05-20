@@ -3,16 +3,16 @@
   margin: 0;
   padding-left: 10%;
   color: #fcfcfc;
-  vertical-align: bottom;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .title {
   margin: 0;
-  display: inline-block;
+  margin-right: 20%;
 }
-.title-item {
-  display: inline-block;  
-  float: right;
-}
+
 .title-label{
   margin: 0;
   margin-top: 5px;
@@ -41,7 +41,7 @@
 	overflow-y: auto;
   list-style-type: none;
   padding-left: 0;
-  flex: 0 0 10em;
+  flex: 0 1 8em;
   border-right: 2px solid gray;
 }
 
@@ -78,13 +78,11 @@
 }
 
 .MsgThread {
-  flex: 1 1 auto;  
-
+  flex: 1;
   display: flex;
   flex-flow: column;
   padding-top: 20px;
 }
-
 .Msgs {
   flex: 1 1 auto;
   margin: 0;
@@ -98,6 +96,7 @@
 }
 .MsgText {
   display: block;
+  width: 30%;
   font-family: Arial, Helvetica, sans-serif;  
   font-size: 1.2em;  
   padding: 4px 1em 4px 1em;
@@ -105,6 +104,21 @@
   outline: none;
   border: none;
 }
+@media(max-width: 400px) {
+  .MsgText {
+    font-size: 0.8em;
+  }
+  .ContactName {
+    font-size: 0.9em;
+  }
+  .MsgThread {
+    flex: 0 1 auto;
+  }
+  .title-btn {
+    display: none;
+  }
+}
+
 .MsgText.receive {
   background-color: #ffc853;
   border-radius: 8px;
@@ -119,17 +133,20 @@
 .TextInput {
   flex: 0 1 2.5em;
   display: flex;
-  flex-flow: row;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
+.Send-btn {
+  flex: 0 0 8em;
+}
+
 .InputBar {
   flex: 1 1 auto;
   font-size: 1.6em;
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 0.5em;
   resize: none;
-}
-.Send-btn {
-  flex: 0 1 8em;
 }
 input {
   font-size: 1.2em;
